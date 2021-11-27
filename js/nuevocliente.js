@@ -32,7 +32,6 @@
         empresa,
       };
       cliente.id = Date.now();
-      console.log(cliente);
       subirDatosDB(cliente);
     }
   }
@@ -50,13 +49,15 @@
   }
   //Subir los datos del usuario a la base de datos
   function subirDatosDB(cliente) {
-    console.log(DB);
     const transaction = DB.transaction(["crm"], "readwrite");
     const objectStore = transaction.objectStore("crm");
 
     objectStore.add(cliente);
-    transaction.onsuccess = function () {
+    transaction.oncomplete = function () {
       imprimirAlerta("Cliente añadido correctamente");
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 2000);
     };
     transaction.onerror = function () {
       imprimirAlerta("Ha habido un error", "error");
