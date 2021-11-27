@@ -5,7 +5,7 @@
   });
   //Crear base de datos IndexedDB
   function crearDB() {
-    const crearDB = window.indexedDB.open(["crm", 1]);
+    const crearDB = window.indexedDB.open(["crm"], 1);
     crearDB.onerror = function () {
       console.log("Hubo un error");
     };
@@ -17,7 +17,6 @@
     //Crear el schema de la DB
     crearDB.onupgradeneeded = function (e) {
       const db = e.target.result;
-      console.log(db);
       const objectStorage = db.createObjectStore("crm", {
         keyPath: "id",
         autoIncrement: true,

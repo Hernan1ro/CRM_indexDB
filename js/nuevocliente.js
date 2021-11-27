@@ -22,17 +22,24 @@
 
     //Validar el formulario
     if (nombre === "" || email === "" || telefono === "" || empresa === "") {
-      imprimirAlerta("Todos los campos debe estar llenos", "error");
+      imprimirAlerta("Todos los campos deben estar llenos", "error");
       return;
     } else {
-      imprimirAlerta("Datos guardados correctamente", "success");
-      subirDatosDB(nombre, email, telefono, empresa);
+      const cliente = {
+        nombre,
+        email,
+        telefono,
+        empresa,
+      };
+      cliente.id = Date.now();
+      console.log(cliente);
+      subirDatosDB(cliente);
     }
   }
 
   //Conectar la base de datos
   function conectarDB() {
-    const abrirConexion = window.indexedDB.open(["crm"], 1);
+    const abrirConexion = window.indexedDB.open("crm", 1);
 
     abrirConexion.onerror = function () {
       console.log("hubo un error");
@@ -42,8 +49,18 @@
     };
   }
   //Subir los datos del usuario a la base de datos
-  function subirDatosDB() {
-    console.log("Subiendo datos a indexBD");
+  function subirDatosDB(cliente) {
+    console.log(DB);
+    const transaction = DB.transaction(["crm"], "readwrite");
+    const objectStore = transaction.objectStore("crm");
+
+    objectStore.add(cliente);
+    transaction.onsuccess = function () {
+      imprimirAlerta("Cliente añadido correctamente");
+    };
+    transaction.onerror = function () {
+      imprimirAlerta("Ha habido un error", "error");
+    };
   }
 
   //Imprimir alerta en el DOM
