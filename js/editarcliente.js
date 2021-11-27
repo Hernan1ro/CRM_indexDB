@@ -1,16 +1,21 @@
 (function () {
+  let idCliente;
   let DB;
+  const formulario = document.querySelector("#formulario");
   //Selectores de los inputs
   const nombreInput = document.querySelector("#nombre");
   const emailInput = document.querySelector("#email");
   const telefonoInput = document.querySelector("#telefono");
   const empresaInput = document.querySelector("#empresa");
+
+  //Event listeners
   document.addEventListener("DOMContentLoaded", () => {
+    formulario.addEventListener("submit", handleSubmit);
     //Conectarse a la base de datos
     conectarDB();
     // verificar el Id de la URL
     const parametrosURL = new URLSearchParams(window.location.search);
-    const idCliente = parametrosURL.get("id");
+    idCliente = parametrosURL.get("id");
     if (idCliente) {
       setTimeout(() => {
         obtenerCliente(idCliente);
@@ -18,6 +23,42 @@
     }
   });
 
+  // Actializar el cliente
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (
+      nombreInput.value === "" ||
+      empresaInput.value === "" ||
+      emailInput.value === "" ||
+      telefonoInput.value === ""
+    ) {
+      imprimirAlerta("Todos los campos son obligatorios", "error");
+      return;
+    }
+
+    // Actualizar cliente en DB
+    const clienteActualizado = {
+      nombre: nombreInput.value,
+      empresa: empresaInput.value,
+      email: emailInput.value,
+      telefono: telefonoInput.value,
+      id: Number(idCliente),
+    };
+
+    const transaction = DB.transaction(["crm"], "readwrite");
+    const objectStore = transaction.objectStore("crm");
+
+    objectStore.put(clienteActualizado);
+    transaction.oncomplete = function () {
+      imprimirAlerta("Editado correctamente");
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 500);
+    };
+    transaction.onerror = function () {
+      imprimirAlerta("Hubo un error", "error");
+    };
+  }
   //Obtener el cliente de la BD
   function obtenerCliente(id) {
     const transaction = DB.transaction(["crm"], "readonly");
