@@ -11,13 +11,14 @@
     };
     crearDB.onsuccess = function () {
       DB = crearDB.result;
-      console.log(DB);
+      console.log("base de datos creada");
     };
 
     //Crear el schema de la DB
     crearDB.onupgradeneeded = function (e) {
       const db = e.target.result;
-      const objectStorage = db.objectStorage("crm", {
+      console.log(db);
+      const objectStorage = db.createObjectStore("crm", {
         keyPath: "id",
         autoIncrement: true,
       });
