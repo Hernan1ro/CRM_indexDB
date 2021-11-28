@@ -1,6 +1,4 @@
 (function () {
-  let DB;
-
   //Formulario //
   const formulario = document.querySelector("#formulario");
   // Event Listener

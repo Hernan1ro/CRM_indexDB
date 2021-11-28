@@ -19,7 +19,7 @@
     if (idCliente) {
       setTimeout(() => {
         obtenerCliente(idCliente);
-      }, 100);
+      }, 200);
     }
   });
 

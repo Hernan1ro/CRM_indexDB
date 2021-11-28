@@ -1,3 +1,5 @@
+let DB;
+
 //Conectar la base de datos
 function conectarDB() {
   const abrirConexion = window.indexedDB.open("crm", 1);
