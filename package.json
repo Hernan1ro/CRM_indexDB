@@ -1,0 +1,23 @@
+{
+  "name": "32-PROYECTO-CRMIndexedDB",
+  "version": "1.0.0",
+  "description": "A basic CRM made with indexDB to build a CRUD App, made 100% with javascript to challenge my progamming skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hernan1ro/CRM_indexDB.git"
+  },
+  "keywords": [],
+  "author": "Hernán Mercado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hernan1ro/CRM_indexDB/issues"
+  },
+  "homepage": "https://github.com/Hernan1ro/CRM_indexDB#readme",
+  "devDependencies": {
+    "cypress": "^9.2.1"
+  }
+}
