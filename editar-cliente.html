@@ -18,27 +18,12 @@
         <nav class="mt-8">
           <a
             href="index.html"
-            class="
-              px-3
-              py-1
-              text-white
-              block
-              hover:bg-teal-700 hover:text-yellow-400
-            "
+            class="px-3 py-1 text-white block hover:bg-teal-700 hover:text-yellow-400"
             >Clientes</a
           >
           <a
             href="nuevo-cliente.html"
-            class="
-              px-3
-              py-1
-              text-white
-              block
-              hover:bg-teal-900
-              mt-2
-              hover:text-yellow-400
-              bg-teal-700
-            "
+            class="px-3 py-1 text-white block hover:bg-teal-900 mt-2 hover:text-yellow-400 bg-teal-700"
             >Nuevo Cliente</a
           >
         </nav>
@@ -49,24 +34,10 @@
 
         <div class="flex flex-col mt-10 items-center">
           <div
-            class="
-              -my-2
-              py-2
-              overflow-x-auto
-              sm:-mx-6 sm:px-6
-              lg:-mx-8 lg:px-8
-              w-10/12
-              md:w-8/12
-              lg:w-6/12
-            "
+            class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-10/12 md:w-8/12 lg:w-6/12"
           >
             <div
-              class="
-                shadow
-                overflow-hidden
-                sm:rounded-lg
-                border-b border-gray-200
-              "
+              class="shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
             >
               <form id="formulario" class="bg-white p-3">
                 <div class="mb-4">
@@ -76,17 +47,8 @@
                     >Nombre</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    data-cy="nombre"
                     id="nombre"
                     name="nombre"
                     type="text"
@@ -100,17 +62,8 @@
                     >Correo</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    data-cy="email"
                     id="email"
                     name="email"
                     type="email"
@@ -125,18 +78,9 @@
                     >Teléfono</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="telefono"
+                    data-cy="telefono"
                     name="telefono"
                     type="tel"
                     placeholder="Teléfono Cliente"
@@ -150,17 +94,8 @@
                     >Empresa</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    data-cy="empresa"
                     id="empresa"
                     name="empresa"
                     type="text"
@@ -171,17 +106,9 @@
                 <input type="hidden" name="id" id="id" value="" />
 
                 <input
+                  data-cy="btn-submit"
                   type="submit"
-                  class="
-                    bg-teal-600
-                    hover:bg-teal-900
-                    w-full
-                    mt-5
-                    p-2
-                    text-white
-                    uppercase
-                    font-bold
-                  "
+                  class="bg-teal-600 hover:bg-teal-900 w-full mt-5 p-2 text-white uppercase font-bold"
                   value="Guardar cambios"
                 />
               </form>

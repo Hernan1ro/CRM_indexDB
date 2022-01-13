@@ -1,5 +1,5 @@
 {
-  "name": "32-PROYECTO-CRMIndexedDB",
+  "name": "crm-with-indexdb",
   "version": "1.0.0",
   "description": "A basic CRM made with indexDB to build a CRUD App, made 100% with javascript to challenge my progamming skills",
   "main": "index.js",
