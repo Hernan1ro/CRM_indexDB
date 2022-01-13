@@ -18,27 +18,12 @@
         <nav class="mt-8">
           <a
             href="index.html"
-            class="
-              px-3
-              py-1
-              text-white
-              block
-              hover:bg-teal-700 hover:text-yellow-400
-            "
+            class="px-3 py-1 text-white block hover:bg-teal-700 hover:text-yellow-400"
             >Clientes</a
           >
           <a
             href="nuevo-cliente.html"
-            class="
-              px-3
-              py-1
-              text-white
-              block
-              hover:bg-teal-900
-              mt-2
-              hover:text-yellow-400
-              bg-teal-700
-            "
+            class="px-3 py-1 text-white block hover:bg-teal-900 mt-2 hover:text-yellow-400 bg-teal-700"
             >Nuevo Cliente</a
           >
         </nav>
@@ -49,24 +34,10 @@
 
         <div class="flex flex-col mt-10 items-center">
           <div
-            class="
-              -my-2
-              py-2
-              overflow-x-auto
-              sm:-mx-6 sm:px-6
-              lg:-mx-8 lg:px-8
-              w-10/12
-              md:w-8/12
-              lg:w-6/12
-            "
+            class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-10/12 md:w-8/12 lg:w-6/12"
           >
             <div
-              class="
-                shadow
-                overflow-hidden
-                sm:rounded-lg
-                border-b border-gray-200
-              "
+              class="shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
             >
               <form id="formulario" class="bg-white p-3">
                 <div class="mb-4">
@@ -76,18 +47,9 @@
                     >Nombre</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="nombre"
+                    data-cy="nombre"
                     name="nombre"
                     type="text"
                     placeholder="Nombre Cliente"
@@ -100,18 +62,9 @@
                     >Correo</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="email"
+                    data-cy="email"
                     name="email"
                     type="email"
                     placeholder="Email Cliente"
@@ -125,18 +78,9 @@
                     >Teléfono</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="telefono"
+                    data-cy="telefono"
                     name="telefono"
                     type="tel"
                     placeholder="Teléfono Cliente"
@@ -150,18 +94,9 @@
                     >Empresa</label
                   >
                   <input
-                    class="
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="empresa"
+                    data-cy="empresa"
                     name="empresa"
                     type="text"
                     placeholder="Empresa Cliente"
@@ -169,17 +104,9 @@
                 </div>
 
                 <input
+                  data-cy="btn-submit"
                   type="submit"
-                  class="
-                    bg-teal-600
-                    hover:bg-teal-900
-                    w-full
-                    mt-5
-                    p-2
-                    text-white
-                    uppercase
-                    font-bold
-                  "
+                  class="bg-teal-600 hover:bg-teal-900 w-full mt-5 p-2 text-white uppercase font-bold"
                   value="Agregar Cliente"
                 />
               </form>
